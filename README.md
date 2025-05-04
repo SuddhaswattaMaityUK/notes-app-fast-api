@@ -32,7 +32,7 @@ The project follows the Model-View-Controller (MVC) architecture pattern:
 - **Models**: Contains entity definitions or Pydantic objects used for data validation and serialization.
 - **Routers**: Acts as controllers, defining REST API endpoints and handling HTTP requests.
 - **Repository Layer**: Handles database manipulation operations, serving as the data access layer.
-- **Dependency Folder**: Manages global dependencies between different components, such as Repository Layer, Service Layer and Controller
+- **Dependency Folder**: Manages global dependencies between different components, such as Repository Layer, Service Layer and Controller Layer
 
 ### Security
 
@@ -40,7 +40,8 @@ This project is a Notes App built using FastAPI. The application provides a secu
 
 ### GitHub Actions Workflow
 
-To automatically execute `pytest` on every push to the `main` branch, you can use the following GitHub Actions workflow:
+To automatically execute `pytest` on every push to the `main` branch, I am
+using the following GitHub Actions workflow:
 
 Create a file named `.github/workflows/test.yml` in your repository with the following content:
 
