@@ -40,7 +40,7 @@ async def read_notes(user: Annotated[dict,Depends(get_current_user)],repo : Anno
     all_notes = await repo.find_all_notes(user['id'])
     return all_notes
 
-@router.get("/analyse/{note_id}" )
+@router.get("/{note_id}/analyse" )
 async def analyse_note(user: Annotated[dict,Depends(get_current_user)],note_id: int,  repo: Annotated[NoteRepository , Depends(get_note_repo)],ml_service: Annotated[SentimentAnalysisService,Depends(get_sentiment_analysis_service)]):
     # Check if the note exists
     note = await repo.find_note(note_id, user['id'])
